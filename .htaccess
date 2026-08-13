@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /freshers/
+Options -MultiViews
+
+# If the file or folder exists, serve it normally
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Otherwise always load index.html (React Router)
+RewriteRule ^ index.html [L]

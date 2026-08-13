@@ -4,15 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-  --font-display: "Space Grotesk", system-ui, sans-serif;
-  --font-sans: "Outfit", system-ui, sans-serif;
-  --color-neon-pink: oklch(0.72 0.28 0.5);
-  --color-neon-cyan: oklch(0.86 0.16 200);
-  --color-neon-purple: oklch(0.68 0.24 305);
-  --color-neon-blue: oklch(0.66 0.22 265);
-}
-
 /*
  * Design system definition.
  *
