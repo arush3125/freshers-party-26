@@ -35,14 +35,18 @@ export function Competitions() {
               aria-hidden
               className="absolute -top-16 -right-16 size-40 rounded-full bg-neon-purple/25 blur-3xl transition-opacity duration-500 group-hover:bg-neon-pink/30"
             />
-            <span className="relative grid size-13 place-items-center rounded-2xl border border-border bg-secondary/60">
-              <c.icon className="size-6 text-neon-cyan transition-colors group-hover:text-neon-pink" />
-            </span>
-            <p className="relative mt-5 text-[11px] font-medium tracking-[0.18em] text-neon-pink uppercase">
-              {c.type}
-            </p>
-            <h3 className="relative mt-1 text-xl font-semibold">{c.name}</h3>
-            <p className="relative mt-2 text-sm text-muted-foreground">{c.short}</p>
+            <div className="relative flex items-start gap-4">
+              <span className="grid size-13 shrink-0 place-items-center rounded-2xl border border-border bg-secondary/60">
+                <c.icon className="size-6 text-neon-cyan transition-colors group-hover:text-neon-pink" />
+              </span>
+              <div className="flex-1">
+                <p className="text-[11px] font-medium tracking-[0.18em] text-neon-pink uppercase">
+                  {c.type}
+                </p>
+                <h3 className="mt-1 text-xl font-semibold">{c.name}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{c.short}</p>
+              </div>
+            </div>
             <span className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground">
               View Details
               <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

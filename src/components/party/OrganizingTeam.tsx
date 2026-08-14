@@ -12,7 +12,7 @@ export function OrganizingTeam() {
         subtitle="Reach out to our organizing committee. We're here to help you!"
       />
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {organizers.map((organizer, index) => (
           <OrganizerCard key={organizer.id} organizer={organizer} index={index} />
         ))}

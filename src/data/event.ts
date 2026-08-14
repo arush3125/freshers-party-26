@@ -19,12 +19,10 @@ import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
 import g6 from "@/assets/gallery-6.jpg";
-import ocmHeadVideo from "/OCM Head.mp4";
-import ciVideo from "/CI.mp4";
-import ci2Video from "/CI (2).mp4";
-import gsVideo from "/GS.mp4";
-import tsVideo from "/TS.mp4";
-import ts2Video from "/TS (2).mp4";
+import arushVideo from "/Arush.mp4";
+import amolSirVideo from "/Anol Sir.mp4";
+import kanishkaVideo from "/Kanishka.mp4";
+import deeptiMamVideo from "/Deepti Mam.mp4";
 import memo1 from "/memo1.png";
 import memo2 from "/memo2.png";
 import memo3 from "/memo3.png";
@@ -57,66 +55,39 @@ export const organizers: Organizer[] = [
     name: "Arush Wavhal",
     designation: "OCM Head",
     phone: "+7977600390",
-    email: "arushwavhalawm@gmail.com",
     whatsapp: "+7977600390",
     instagram: "Shana_.aruzz",
     image: g1,
-    video: ocmHeadVideo,
+    video: arushVideo,
   },
   {
     id: "2",
     name: "Amol Suryavanshi",
     designation: "Council Incharge",
-    phone: "+91 98765 43211",
-    email: "priya.cultural@agnel.edu",
-    whatsapp: "+91 98765 43211",
-    instagram: "priya_agnel",
+    phone: "83569 99573",
+    whatsapp: "83569 99573",
+    instagram: "1987amols",
     image: g2,
-    video: ciVideo,
+    video: amolSirVideo,
   },
   {
     id: "3",
     name: "Kanishka Tannkar",
     designation: "General Secretary",
-    phone: "+91 98765 43212",
-    email: "amit.events@agnel.edu",
-    whatsapp: "+91 98765 43212",
-    instagram: "amit_agnel",
+    phone: "70218 72879",
+    whatsapp: "70218 72879",
+    instagram: "_.kani8hkaaaa",
     image: g3,
-    video: gsVideo,
+    video: kanishkaVideo,
   },
   {
     id: "4",
-    name: "Gauri Dhuri",
-    designation: "Technical Secretary",
-    phone: "+91 98765 43213",
-    email: "sneha.volunteer@agnel.edu",
-    whatsapp: "+91 98765 43213",
-    instagram: "sneha_agnel",
-    image: g4,
-    video: tsVideo,
-  },
-  {
-    id: "5",
-    name: "Deepti Mam",
+    name: "Deepti Hurgat",
     designation: "Council Incharge",
-    phone: "+91 98765 43214",
-    email: "vikram.tech@agnel.edu",
-    whatsapp: "+91 98765 43214",
-    instagram: "vikram_agnel",
+    phone: "98921 09585",
+    whatsapp: "98921 09585",
     image: g5,
-    video: ci2Video,
-  },
-  {
-    id: "6",
-    name: "Harshali Bhosale",
-    designation: "Technical Secretary",
-    phone: "+91 98765 43215",
-    email: "anjali.marketing@agnel.edu",
-    whatsapp: "+91 98765 43215",
-    instagram: "anjali_agnel",
-    image: g6,
-    video: ts2Video,
+    video: deeptiMamVideo,
   },
 ];
 
@@ -154,7 +125,7 @@ export const competitions: Competition[] = [
       "The most prestigious title of Freshers' Party '26. Showcase your personality, confidence, and talent to become the face of the batch.",
     instructions: [
       "Ramp walk introduction round",
-      "Talent showcase (2 minutes)",
+      "Talent showcase (if any)",
       "Q&A round with judges",
       "Formal or smart casual attire",
     ],
@@ -174,7 +145,7 @@ export const competitions: Competition[] = [
     description:
       "Bring energy, rhythm and attitude to the Fresher's stage. Any style is welcome — hip hop, classical, freestyle or fusion.",
     instructions: [
-      "Solo and group (max 8 members) entries allowed",
+      "Solo and group (max 10 members) entries allowed",
       "Maximum 4 minutes of performance",
       "Submit your audio track beforehand",
       "Props allowed, but no fire or liquids",
@@ -231,23 +202,23 @@ export const competitions: Competition[] = [
 export const timeline = [
   {
     title: "Registration Starts",
-    date: "10th Aug",
+    date: "14th Aug",
     detail: "Forms go live for all first-year students.",
   },
   {
     title: "Registration Deadline",
-    date: "16th Aug",
+    date: "19th Aug",
     detail: "Last date to Register for Fresher's Party '26.",
   },
   {
     title: "Auditions",
-    date: "17th & 18th Aug",
+    date: "20th & 21st Aug",
     detail: "Shortlisting rounds held in the college Foyer.",
   },
   {
     title: "Freshers' Party Day",
     date: "22nd Aug",
-    detail: "The big night — performances, prizes and the after-party.",
+    detail: "The big day — performances, prizes and the after-party.",
   },
 ];
 
@@ -301,6 +272,6 @@ export const navLinks = [
   { label: "Timeline", href: "#timeline" },
   { label: "Gallery", href: "#gallery" },
   { label: "Competitions", href: "#competitions" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "#team" },
   { label: "FAQs", href: "#faqs" },
 ];

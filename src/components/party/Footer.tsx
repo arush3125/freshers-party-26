@@ -1,5 +1,7 @@
 import { Instagram, Mail, Phone } from "lucide-react";
 import { navLinks } from "@/data/event";
+import agnelLogo from "/Agnel_logo (2).png";
+import councilLogo from "/Council_logo-removebg-preview (1).png";
 
 export function Footer() {
   return (
@@ -8,12 +10,12 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <img
-              src="/Agnel_logo.png"
+              src={agnelLogo}
               alt="Fr. Agnel Polytechnic Logo"
               className="size-12 rounded-full object-contain"
             />
             <img
-              src="/Council_logo-removebg-preview (1).png"
+              src={councilLogo}
               alt="Student Council Logo"
               className="size-12 rounded-full object-contain"
             />
@@ -49,11 +51,11 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li>
               <a
-                href="mailto:apvcouncil26@gmail.com"
+                href="#team"
                 className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
               >
                 <Mail className="size-4 text-neon-pink" />
-                apvcouncil26@gmail.com
+                Meet the Team
               </a>
             </li>
             <li>

@@ -12,15 +12,6 @@ export function Timeline() {
       />
 
       <div className="relative">
-        <div
-          aria-hidden
-          className="absolute top-6 left-6 hidden h-px w-[calc(100%-3rem)] bg-linear-to-r from-neon-blue/10 via-neon-purple/60 to-neon-pink/10 md:block"
-        />
-        <div
-          aria-hidden
-          className="absolute top-0 left-6 h-full w-px bg-linear-to-b from-neon-blue/10 via-neon-purple/60 to-neon-pink/10 md:hidden"
-        />
-
         <ol className="grid gap-6 md:grid-cols-4">
           {timeline.map((item, i) => (
             <motion.li

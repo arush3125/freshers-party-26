@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sparkles } from "lucide-react";
 import { navLinks } from "@/data/event";
+import agnelLogo from "/Agnel_logo (2).png";
+import councilLogo from "/Council_logo-removebg-preview (1).png";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -12,6 +14,33 @@ export function Navbar() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const closeMenu = () => setOpen(false);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          setTimeout(() => {
+            const offset = 112;
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - offset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+            });
+          }, 100);
+        }
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    handleHashChange(); // Handle initial load with hash
+
+    return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
   return (
@@ -27,18 +56,18 @@ export function Navbar() {
         <a href="#home" className="flex items-center gap-3">
           {/* LOGO PLACEHOLDER 1 — College Logo */}
           <img
-            src="/Agnel_logo.png"
+            src={agnelLogo}
             alt="Fr. Agnel Polytechnic Logo"
-            className="size-16 rounded-full object-contain"
+            className="size-28 rounded-full object-contain"
           />
           {/* LOGO PLACEHOLDER 2 — Student Council Logo */}
           <img
-            src="/Council_logo-removebg-preview (1).png"
+            src={councilLogo}
             alt="Student Council Logo"
-            className="size-16 rounded-full object-contain"
+            className="size-20 rounded-full object-contain"
           />
           <span className="hidden text-sm leading-tight font-semibold sm:block">
-             Agnel Polytechnic
+            Agnel Polytechnic
             <span className="block text-xs font-normal text-muted-foreground">
               Student Council
             </span>
@@ -93,7 +122,7 @@ export function Navbar() {
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    onClick={() => setOpen(false)}
+                    onClick={closeMenu}
                     className="block rounded-xl px-4 py-3 text-base text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-foreground"
                   >
                     {l.label}
@@ -103,7 +132,7 @@ export function Navbar() {
               <li>
                 <a
                   href="#competitions"
-                  onClick={() => setOpen(false)}
+                  onClick={closeMenu}
                   className="mt-2 block rounded-xl px-4 py-3 text-center text-base font-semibold text-primary-foreground"
                   style={{ backgroundImage: "var(--gradient-neon)" }}
                 >
